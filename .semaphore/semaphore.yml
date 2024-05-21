@@ -13,3 +13,12 @@ blocks:
             - checkout
             - sem-version java 11
             - mvn -B  -DskipTests clean package --file pom.xml
+    dependencies: []
+  - name: TEST
+    dependencies:
+      - Maven
+    task:
+      jobs:
+        - name: JUNIT
+          commands:
+            - junit 'target/surefire-reports/*.xml'
