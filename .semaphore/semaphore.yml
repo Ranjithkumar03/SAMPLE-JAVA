@@ -15,8 +15,7 @@ blocks:
             - mvn -B  -DskipTests clean package --file pom.xml
     dependencies: []
   - name: TEST
-    dependencies:
-      - Maven
+    dependencies: []
     task:
       jobs:
         - name: JUNIT
